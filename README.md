@@ -33,16 +33,3 @@ YOUR_EMAIL). Paths to your own local R libraries, Singularity and Julia will dif
 
 The same goes for the params.tsv file which controls the analyses, the paths in this will need to be modified ($YOUR_WORKING_DIR).
 00_process_environmental_data - a script to strip out multi-band environmental layers (i.e. Wordlclim2 data) and store them for use with Life on the edge
-
-processing_genomic_data_directory:
-* -batch_extract_results-.sh - wrapper script to extract all results for parameter combination optimisation in Stacks. Batch calls 02b_extract_results.sh
-* -batch_test_denovo-.sh - wrapper script to run all parameter combinations of m, M and n in Stacks. Batch calls 02a_denovo_map_test.sh
-* -download_SRA_accession-.sh wrapper script to download SRA accessions for multiple datasets. Batch calls 00b_download_SRA_data.sh
-* 00a_download_ENA_data.sh - script to download specific datasets from ENA
-* 00b_download_SRA_data.sh - script to download specific datasets from SRA
-* 01_process_radtags.sh - script to demultiplex raw reads using the process_radtags program in Stacks
-* 02a_denovo_map_test.sh - script to run each parameter combination of m, M and n in Stacks
-* 02b_extract_results.sh - script to extract each result for parameter combination optimisation in Stacks
-* 02c_plot_results.R - script to plot results of parameter optimisations in Stacks
-* 03a_denovo_map_full.sh - Script to run the full denovo_map.pl program in Stacks based on the optimised parameters in the above script
-
